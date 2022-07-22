@@ -1,0 +1,27 @@
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blueviolet;
+    font-size: 80px;
+    text-align: center;
+}
+
+img {
+   width: 600px;
+    float: left;
+    /* remove background from image  */
+}
+
+p {
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+}
+
+
+div p{
+    display: flex;
+    background-color: bisque;
+    width: 100%;
+    margin-bottom: 1em;
+}
