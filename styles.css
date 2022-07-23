@@ -1,27 +1,35 @@
+/* blackboard background image */
+
+body {
+    background-image: url("./assets/UniformBadDingo-size_restricted.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* decorate and align start button */
+.btn {
+    position: fixed;
+    left: 50%;
+    font-size: 2em;
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: auto;
+}
 
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: blueviolet;
-    font-size: 80px;
+    color: whitesmoke;
+    font-size: 6em;
     text-align: center;
 }
 
 img {
-   width: 600px;
-    float: left;
-    /* remove background from image  */
+   width: 800px;
+   
+    
 }
 
-p {
-    text-align: center;
-    font-family: cursive;
-    font-size: 50px;
-}
-
-
-div p{
-    display: flex;
-    background-color: bisque;
-    width: 100%;
-    margin-bottom: 1em;
-}
