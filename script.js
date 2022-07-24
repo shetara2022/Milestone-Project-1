@@ -5,8 +5,8 @@
 //else give correct answer 
 //add points if answer is correct 
 
-
-let questions = [
+//questions 
+const questions = [
     {question: 'What is Methodology the study of?',
 option1: 'space',
 option2: 'methods',
@@ -42,4 +42,3 @@ answer: 4,
 
 
 
-//
