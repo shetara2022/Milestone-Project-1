@@ -1,10 +1,19 @@
+//first question 
+//next function
+//
+//set timer 
+var count = 15;
+var interval = setInterval(function(){
+  document.getElementById('countdown-timer').innerHTML=count;
+  count--;
+  if (count === 0){
+    clearInterval(interval);
+    document.getElementById('countdown-timer').innerHTML='Time is up!'
+  }
+}, 1000);
 
-//display questions in a div or section
-//user needs to able to select the correct answer (event listener/click)
-//if answer is correct, move to next question
-//else give correct answer 
-//add points if answer is correct 
 
+// function
 //questions 
 const questions = [
     {question: 'What is Methodology the study of?',
