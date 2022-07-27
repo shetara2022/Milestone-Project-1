@@ -1,10 +1,31 @@
-//select questions
-const questionContainer = document.getElementById('question-container');
-const getQuestions = document.querySelector('question');
-const options = document.querySelectorAll('btn');
-const currectQuestion = [];
-const questionCounter = 0;
-const maxQuestions = 5; 
+//reference my questions and answer choices
+const getQuestion = document.getElementById("question");
+//console.log(getQuestion);
+
+const answers = document.getElementsByClassName("answer");
+//console.log(answers);
+
+const totalQuestions = 5; //how many questions to answer
+
+let  currentQuestion = []; //select current question
+let questionCounter = 0; //count the question you are on
+let score = 0; //how many question answered correctly
+let availableQuestion = [];
+
+
+function playGame () => {
+questionCounter= 0;
+score = 0;
+availableQuestion = questions; 
+}
+
+
+
+
+
+
+
+
 
 //question bank
 const questions = [
@@ -32,10 +53,6 @@ const questions = [
   correctAnswer: 'Raleigh'
 },
 ]
-//function to show questions
-function showQuestion(){
-  display.innerText = getQuestions.question;
-}
 
 
 //set timer (https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz)

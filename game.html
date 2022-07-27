@@ -9,30 +9,34 @@
 </head>
 
 <body>
-  
-    <!-- Question Container -->
-    <div class ="container2"> 
          <!-- Timer -->
-    <p id = "countdown-timer">15</p>
-        <div id ="question-container">
-            <div class="question"></div>
-            <div class="answer-buttons" id="btn-grid">
-                    <button class="btn" type="button">Choice 1</button>
-                    <button class="btn" type="button">Choice 2</button>
-                    <button class="btn" type="button">Choice 3</button>
-                    <button class="btn" type="button">Choice 4</button>
+    <p id = "countdown-timer"></p>
+    <!-- Question Container -->
+        <div id ="container2">
+            <div id="trivia" class = "justify-canter flex-column">
+            <h2 id="question"><em>What is the answer to this question?</em></h2>
+
+            <!-- answer-choices -->
+            <div class="answer_button">
+                    <p class="answer">Choice 1</p>
+                    </div>
+            <div class="answer_button">
+                    <p class="answer">Choice 2</p>
+                    </div>
+            <div class="answer_button">
+                    <p class="answer">Choice 3</p>
+                    </div>
+            <div class="answer_button">
+                    <p class="answer">Choice 4</p>
                   </div>
             </div>
-            
-           <!-- Next button -->
+
+            <!-- Next button -->
             <div class="controls">
                 <!-- <button id="previous-btn">Previous</button> -->
                 <button id="next-btn">Next</button>
             </div>
-            
-        </div>
-        </div>
+            </div>
         <script src ="./script.js"></script>
-
 </body>
 </html>
