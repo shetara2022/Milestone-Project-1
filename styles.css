@@ -23,7 +23,12 @@ body {
     padding: 15px 30px;
     margin: auto;
     margin-bottom: 1rem;
-    /* justify-content: center; */
+}
+
+.start-btn:hover{
+    cursor: pointer;
+    box-shadow: 1rem 1rem whitesmoke;
+    transform: translateY(-0.5rem);
 }
 
 .container {
@@ -45,7 +50,7 @@ img {
  }
 
 img:hover {
-    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     transform: scaleX(-1);
   }
 
