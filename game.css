@@ -27,8 +27,8 @@ body {
 }
 
 #container {
-    width: 900px;
-    height: 900px;
+    max-width: 900px;
+    max-height: 900px;
     background-color: whitesmoke;
     box-shadow: rgb(118, 223, 179) 20px 20px 10px;
     border-radius: 3em;
@@ -60,9 +60,11 @@ body {
 
 .answer:hover {
     border-color: whitesmoke;
-    box-shadow: 0.5rem 0.5rem rgb(146, 235, 98);
+    box-shadow: 0.5rem 0.5rem rgb(50, 55, 50);
     transform: translateY(-0.5rem);
-
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: black;
 }
 
 .correct {
@@ -136,10 +138,19 @@ body {
 
 }
 
-
 #results {
-
+color: black;
+font-size: 2rem;
+text-align: center;
+margin-bottom: 4rem;
 }
-/* .hide {
-    display: none;
-} */
+
+.trivia-restart a {
+    font-size: 1.6rem;
+    color: white;
+    background-color: gold;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+
