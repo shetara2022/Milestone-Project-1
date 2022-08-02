@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&family=Edu+NSW+ACT+Foundation&family=Rampart+One&family=Saira:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&family=Edu+NSW+ACT+Foundation&family=Mouse+Memoirs&family=Rampart+One&family=Saira:wght@100;400&display=swap');
 
 body {
     display: flex;
@@ -14,47 +14,54 @@ body {
 }
 
 /* COUNTDOWN TIMER */
-#countdown-timer {
-    display:flex;
-    font-size: 3em;
+#hud #countdown-timer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
     align-items: center;
-    color: rgb(241, 51, 51);
-    
-   
+    color: red;
 }
-#time{
+
+#time {
     margin-right: 1em;
 }
 
+
 #container {
-    max-width: 900px;
-    max-height: 900px;
+    display: flex;
+    position: fixed;
+    padding: 50px 0;
     background-color: whitesmoke;
-    box-shadow: rgb(118, 223, 179) 20px 20px 10px;
+    box-shadow: rgb(171, 240, 211) 20px 20px 10px;
     border-radius: 3em;
-    margin: 20px 0;
 }
+
 /* answer buttons container */
 #answer_button {
+    position: relative;
     display: grid;
+    max-width: 900%;
+    max-height: 900%;
     margin-bottom: 1.5rem;
-    gap: 10px;
-    /* width:100%; */
+    gap: 5px;
+    padding: 30px 0;
+    /* width: auto; */
 }
 
 /* decorate and align answer buttons */
 .answer {
-    font-size: 2.2em;
+    font-size: 1.8em;
     text-align: center;
     width: 75%;
     background-color: black;
     color: white;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 4px solid white;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin: auto;
     justify-content: center;
+    font-family: 'Saira', sans-serif;
 
 }
 
@@ -77,72 +84,54 @@ body {
 
 #question {
     display: flex;
-    padding: .5em;
+    padding: 50px;
     justify-content: center;
-    font-family: 'Cormorant SC', serif;
-    font-size: 3em;
+    font-family: 'Saira', sans-serif;
+    font-size: 2em;
     margin: auto;
     align-items: center;
+    text-align: center;
 }
 
-#next-btn, #total_correct  {
-    display: block;
-    position: relative;
-    /* padding: .4rem; */
-    margin: auto;
-    margin-top: 1%;
-    font-family: 'Rampart One';
-    color: white;
-    font-size: 2em;
-    border-radius: 2px;
-    border: 2px solid whitesmoke;
-    background-color: rgb(67, 195, 107);
-}
-#total_correct {
-    display: block;
-    position: relative;
-    
-}
-
-#next-btn:hover {
-    border-color: black;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    transform: translateY(-0.5rem);
-    border-radius: 3em;
-    color: black
-}
-
-.controls {
-    display: inline;
-    margin: auto;
-    justify-content: center;
-
-}
 
 #hud {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     margin-left: 2.5em;
-  
-
 }
 
 .hud-prefix {
-    font-size: 1.5em; ;
+    font-size: 1.5em;
+    ;
+    font-family: 'Saira', sans-serif;
+
+}
+
+#hud-item {
+
+    text-align: center;
+    height: 100px;
+    width: 30%;
+
 }
 
 .hud-main-text {
     text-align: center;
-    font-size: 3em;
+    font-size: 1.5em;
     color: red;
+    font-family: 'Saira', sans-serif;
+    padding: 0;
+    background-color: bisque;
+
+
 
 }
 
 #results {
-color: black;
-font-size: 2rem;
-text-align: center;
-margin-bottom: 4rem;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .trivia-restart a {
@@ -153,4 +142,67 @@ margin-bottom: 4rem;
     border-radius: 5px;
 }
 
+img {
+    display: inline-flex;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: auto;
+}
 
+.restart a {
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    top: 85%;
+    background-color: green;
+    text-decoration: none;
+    border-radius: 60px;
+    border: 2px solid white;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    left: 35%;
+    font-family: 'Mouse Memoirs', sans-serif;
+    /* margin-bottom: 1rem; */
+}
+
+.restart a:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px whitesmoke;
+}
+
+h1 {
+    font-family: 'Rampart One';
+    font-size: 3em;
+    text-align: center;
+    color: rgb(16, 140, 27);
+    padding: 1em;
+}
+
+#score {
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Mouse Memoirs', sans-serif;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+    bottom: 60%;
+}
+
+#emoji {
+    position: absolute;
+    left: 32%;
+    bottom: 35%;
+    width: 40%;
+    height: auto;
+}
+
+#trophy {
+    position: absolute;
+    opacity: 50%;
+    top: 40%;
+}

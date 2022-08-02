@@ -12,20 +12,22 @@
 <body>
         <!-- Question Container -->
         <div id="container">
+
                 <div id="trivia" class="justify-center flex-column">
                         <div id="hud">
+                                <img src="./assets/hourglass-unscreen.gif" alt="hourglass">
                                 <div id="hud-item">
-                                        <p class ="hud-prefix">QUESTION:</p>
-                                        <h1 class = "hud-main-text"></h1>
-                                </div> 
+                                        <p class="hud-prefix">QUESTION:</p>
+                                        <h1 class="hud-main-text"></h1>
+                                </div>
                                 <!-- TIMER -->
                                 <div id="countdown-timer">
-                                <h6>Countdown:</h6>
-                                <h6 id="time">00</h6>
+                                        <h6>COUNTDOWN:</h6>
+                                        <h6 id="time">00</h6>
+                                </div>
                         </div>
-                        </div>
-                       
-                        
+
+
                         <h2 id="question"><em>What is the answer to this question?</em></h2>
 
                         <!-- answer-choices -->
@@ -34,11 +36,6 @@
                                 <button class="answer" data-number="2">Choice 2</button>
                                 <button class="answer" data-number="3">Choice 3</button>
                                 <button class="answer" data-number="4">Choice 4</button>
-                        </div>
-                        <!-- Scoreboard -->
-                        <div class="controls">
-                                <button id="next-btn" class="next-btn btn hide">NEXT</button>
-                                <p id="total_correct"></p>
                         </div>
                 </div>
         </div>

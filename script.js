@@ -1,4 +1,5 @@
 const questionBank = [           //QUESTION BANK
+
   {
     question: 'What is Methodology the study of?',
     option1: 'space',
@@ -90,7 +91,7 @@ const questionBank = [           //QUESTION BANK
   },
 
   {
-    question: 'In which year did Facebook launch',
+    question: 'In which year did Facebook launched?',
     option1: '2002',
     option2: '2003',
     option3: '2004',
@@ -111,10 +112,9 @@ const questionBank = [           //QUESTION BANK
 const timer = document.getElementById('time');
 const question = document.getElementById('question');
 const answerChoice = Array.from(document.getElementsByClassName('answer'));
-// const nextButton = document.getElementById('next-btn');
-const scoreboard = document.getElementById('total_correct');
 const totalQuestions = 12;
 const questionCounterText = document.querySelector('.hud-main-text');
+const points = 1;
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -129,16 +129,18 @@ startGame = () => {
   availableQuestions = [...questionBank];
   displayQuestion();
 };
+startGame();
+
 
 //Show Question from question bank
 function displayQuestion() {
   if (availableQuestions.length === 0 || questionCounter > totalQuestions) {
     end();
   }
- else if (timer === 0) {
+  else if (timer === 0) {
     timeUp();
   }
- 
+
   questionCounter++;
   questionCounterText.innerText = `${questionCounter} of ${totalQuestions}`;
 
@@ -156,6 +158,8 @@ function displayQuestion() {
   availableQuestions.splice(questionIndex, 1);  //removes questions from the array...
 };
 
+
+
 //to click on a response and mark it correct or incorrect 
 answerChoice.forEach(option => {
   option.addEventListener('click', e => {
@@ -165,7 +169,9 @@ answerChoice.forEach(option => {
     let classToApply = 'incorrect';
     if (selectedAnswer == currentQuestion.correctAnswer) {
       classToApply = 'correct';
+      score++
     };
+
     answerSelected.parentElement.classList.add(classToApply);
 
     setTimeout(() => {                                                   //adds CSS style to buttons 
@@ -174,8 +180,10 @@ answerChoice.forEach(option => {
     }, 1000);
   });
 
+
+
   // //SET COUNTDOWN TIMER 
-  let count = 60;
+  let count = 5;
   let timer = setInterval(function () {
     document.getElementById('time').innerHTML = count;
     count--;
@@ -186,29 +194,33 @@ answerChoice.forEach(option => {
     }
   }, 1000);
 });
-startGame();
+
 
 //when trivia has ended 
 function end() {
   let triviaEndHTML =
     `
     <h1>CONGRATULATIONS, You have completed this trivia!</h1>
-    <h2 id = "score"> You scored: ${currentQuestion.correct} of ${totalQuestions}</h2>
+    <img id = "trophy" src = "./assets/trophy-icon.webp" alt= "trophy">
+    <h2 id = "score"> YOU SCORED: ${score} of ${totalQuestions}</h2>
     <div class = "restart">
-    <a href ="index.html">Restart</a>
+    <a href ="index.html">RESTART</a>
     </div>
     `;
   let triviaElement = document.getElementById('trivia');
   triviaElement.innerHTML = triviaEndHTML;
 }
+
+
 //if time expires before the player finishes the trivia
 function timeUp() {
   let timesUpHTML =
     `
       <h1>TIME IS UP!</h1>
-      <h2 id = "score"> You scored: ${currentQuestion.correct} of ${totalQuestions}</h2>
+      <img id = "emoji" src = "./assets/worried emoji.png" alt= "worried face">
+      <h2 id = "score"> YOU SCORED: ${score} of ${totalQuestions}</h2>
       <div class = "restart">
-       <a href ="index.html">Restart</a>
+       <a href ="index.html">RESTART</a>
     </div>
       `;
   let timesUpElement = document.getElementById('trivia');
