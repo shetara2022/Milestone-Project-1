@@ -9,7 +9,7 @@ with my students for practice of skills but also as a fun way to discover new an
 How to play: 
 
 On the intro screen, there are a set of rules to follow. The rules are as follows: 
-1. You have 60 seconds to answer 12 general knowledge questions accurately!
+1. You have 60 seconds to answer 15 general knowledge questions accurately!
 2. Click the button of the correct answer. 
 3. You will not be able to change your response once selected! 
 4. Your total score will be revealed at the end of the game.
@@ -24,6 +24,7 @@ If you complete the trivia, a congratulations screen will display to show the nu
 You will be able to restart the game! 
 
 This game was built using HTML, CSS and Javascript. 
+
 
 //Bugs 
 

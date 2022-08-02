@@ -107,12 +107,39 @@ const questionBank = [           //QUESTION BANK
     option4: '88',
     correctAnswer: 4,
   }
+
+  {
+    question: 'What is the largest organ in the human body?',
+    option1: 'heart',
+    option2: 'kidneys',
+    option3: 'liver',
+    option4: 'stomach',
+    correctAnswer: 3,
+  }
+
+  {
+    question: 'Where is the Great Pyramid of Giza located?',
+    option1: 'Egypt',
+    option2: 'Algeria',
+    option3: 'Tunisia',
+    option4: 'Libya',
+    correctAnswer: 1,
+  }
+
+  {
+    question: 'What is the fastest aquatic animal?',
+    option1: 'baracuda',
+    option2: 'sailfish',
+    option3: 'the macko',
+    option4: 'the killer whale',
+    correctAnswer: 2,
+  }
 ]
 
 const timer = document.getElementById('time');
 const question = document.getElementById('question');
 const answerChoice = Array.from(document.getElementsByClassName('answer'));
-const totalQuestions = 12;
+const totalQuestions = 15;
 const questionCounterText = document.querySelector('.hud-main-text');
 const points = 1;
 
@@ -183,7 +210,7 @@ answerChoice.forEach(option => {
 
 
   // //SET COUNTDOWN TIMER 
-  let count = 5;
+  let count = 60;
   let timer = setInterval(function () {
     document.getElementById('time').innerHTML = count;
     count--;
