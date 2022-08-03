@@ -28,6 +28,8 @@ This game was built using HTML, CSS and Javascript.
 
 //Bugs 
 
--CSS styling changes with the change/length of questions (containers).
+-CSS styling changes with the change/length of questions (containers)
+-delay screen before seeing first question
+
 
  
