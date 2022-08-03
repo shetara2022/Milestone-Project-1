@@ -106,7 +106,7 @@ const questionBank = [           //QUESTION BANK
     option3: '78',
     option4: '88',
     correctAnswer: 4,
-  }
+  },
 
   {
     question: 'What is the largest organ in the human body?',
@@ -115,7 +115,7 @@ const questionBank = [           //QUESTION BANK
     option3: 'liver',
     option4: 'stomach',
     correctAnswer: 3,
-  }
+  },
 
   {
     question: 'Where is the Great Pyramid of Giza located?',
@@ -124,7 +124,7 @@ const questionBank = [           //QUESTION BANK
     option3: 'Tunisia',
     option4: 'Libya',
     correctAnswer: 1,
-  }
+  },
 
   {
     question: 'What is the fastest aquatic animal?',
@@ -133,7 +133,7 @@ const questionBank = [           //QUESTION BANK
     option3: 'the macko',
     option4: 'the killer whale',
     correctAnswer: 2,
-  }
+  },
 ]
 
 const timer = document.getElementById('time');
@@ -154,7 +154,7 @@ startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questionBank];
-  displayQuestion();
+  setTimeout(displayQuestion, 2000);
 };
 startGame();
 
@@ -196,12 +196,19 @@ answerChoice.forEach(option => {
     let classToApply = 'incorrect';
     if (selectedAnswer == currentQuestion.correctAnswer) {
       classToApply = 'correct';
+      document.getElementById('correct').play();
       score++
+    }
+    else {
+      if (selectedAnswer != currentQuestion.correctAnswer) {
+        document.getElementById('wrong').play();
+      }
+
     };
 
     answerSelected.parentElement.classList.add(classToApply);
 
-    setTimeout(() => {                                                   //adds CSS style to buttons 
+    setTimeout(() => {
       answerSelected.parentElement.classList.remove(classToApply);
       displayQuestion();
     }, 1000);
